@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Noi, la Qualità — Catalogo prodotti 2026</title>
+<meta name="description" content="Catalogo digitale di specialità italiane: pasta, riso, salumi, formaggi, miele, sottoli, tonno, tartufi e alcolici. Noi, la Qualità srl, Roma.">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#24416b;--teal:#67c5b5;--gold:#fcb831;--ink:#1a2a45;--bg:#fbf9f5;--line:#e4dfd5;--mut:#5b6678;--tealD:#2b8a7a;
+--serif:"Bodoni Moda",Georgia,serif;--sans:"Hanken Grotesk",system-ui,sans-serif;--w:1240px;--r:2px;--t:.25s ease}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font:400 17px/1.6 var(--sans);color:var(--ink);background:var(--bg);overflow-x:hidden}
+img{max-width:100%;display:block}a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-weight:700;color:var(--navy);line-height:1.08;letter-spacing:-.01em}
+h1{font-size:clamp(40px,6.4vw,84px)}h2{font-size:clamp(30px,4vw,52px)}h3{font-size:24px}
+.eye{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--tealD);font-weight:600;margin-bottom:14px}
+.lead{font-size:19px;color:var(--mut);max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 26px;border:1.5px solid var(--navy);background:none;color:var(--navy);font:600 15px var(--sans);text-decoration:none;cursor:pointer;border-radius:var(--r);transition:var(--t)}
+.btn.p{background:var(--gold);border-color:var(--gold);color:var(--navy)}
+.btn:hover{background:var(--navy);color:#fff;border-color:var(--navy)}.btn.p:hover{background:var(--navy)}
+.sec{padding:96px 0}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(251,249,245,.96);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:var(--t)}
+header.s{border-color:var(--line)}
+.hb{display:flex;align-items:center;gap:28px;height:84px;transition:var(--t)}header.s .hb{height:64px}
+.logo img{height:60px;width:auto;transition:var(--t)}header.s .logo img{height:44px}
+nav{display:flex;gap:28px;margin-left:auto;align-items:center}
+nav a,.ln button{font-size:15px;font-weight:500;text-decoration:none;position:relative;padding:6px 0;background:none;border:0;cursor:pointer;color:var(--ink);font-family:var(--sans)}
+nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:var(--t)}
+nav a:hover::after,nav a.on::after{transform:scaleX(1)}
+.ln{display:flex;gap:2px;border:1px solid var(--line);padding:2px}.ln button{padding:4px 10px;min-height:32px}.ln button[aria-pressed=true]{background:var(--navy);color:#fff}
+.sb{background:none;border:0;cursor:pointer;width:44px;height:44px;display:grid;place-items:center;color:var(--navy)}
+.mb{display:none}
+/* views */
+.v{display:none}.v.on{display:block}
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 1.05fr;min-height:calc(100vh - 84px);max-height:860px}
+.hero .tx{display:flex;flex-direction:column;justify-content:center;padding:56px 24px 56px max(24px,calc((100vw - var(--w))/2 + 24px));gap:26px}
+.hero h1 em{font-style:italic;color:var(--tealD)}
+.hero .ph{position:relative;overflow:hidden;background:var(--navy)}
+.hero .ph img{width:100%;height:100%;object-fit:cover;animation:kb 14s ease-out both}
+@keyframes kb{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero .ph span{position:absolute;left:0;bottom:0;background:var(--gold);color:var(--navy);padding:10px 18px;font-size:13px;font-weight:600}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+/* intro */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.intro .img{aspect-ratio:4/5;overflow:hidden}.intro img{width:100%;height:100%;object-fit:cover}
+.intro p{margin:20px 0 28px;max-width:52ch;color:var(--mut)}
+/* collection */
+.col{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;margin-top:48px}
+.tile{position:relative;overflow:hidden;min-height:280px;display:flex;align-items:flex-end;text-decoration:none;color:#fff;background:var(--navy);cursor:pointer;border:0;text-align:left;font-family:var(--sans)}
+.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.tile:hover img{transform:scale(1.05)}
+.tile::before{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,35,60,.78),rgba(20,35,60,0) 60%);z-index:1}
+.tile .in{position:relative;z-index:2;padding:22px}.tile h3{color:#fff;font-size:28px}.tile p{font-size:14px;opacity:.9;margin:4px 0 8px}
+.tile b{font-size:14px;border-bottom:2px solid var(--gold)}
+.tile.txt{background:var(--navy)}.tile.txt.t2{background:var(--tealD)}.tile.txt::before{display:none}
+.c1{grid-column:span 7;min-height:460px}.c2{grid-column:span 5}.c3{grid-column:span 4}.c4{grid-column:span 4}.c5{grid-column:span 4}.c6{grid-column:span 5}.c7{grid-column:span 7}.c8{grid-column:span 6}.c9{grid-column:span 6}
+/* regions */
+.rg{background:var(--navy);color:#fff}.rg h2,.rg .eye{color:#fff}.rg .eye{color:var(--teal)}.rg .lead{color:#c9d3e4}
+.rgg{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-top:40px}
+.zones{display:flex;flex-direction:column;border-top:1px solid #ffffff33}
+.zones button{background:none;border:0;border-bottom:1px solid #ffffff33;color:#fff;font:700 28px var(--serif);text-align:left;padding:20px 0;cursor:pointer;display:flex;justify-content:space-between;transition:var(--t)}
+.zones button:hover,.zones button[aria-pressed=true]{color:var(--gold);padding-left:14px}
+.zones small{font:400 14px var(--sans);color:#c9d3e4;align-self:center}
+.rbox{background:#ffffff0f;padding:28px;min-height:300px}.rbox ul{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+.rbox li button{background:none;border:1px solid #ffffff55;color:#fff;padding:8px 14px;cursor:pointer;font:500 14px var(--sans);transition:var(--t)}
+.rbox li button:hover,.rbox li button[aria-pressed=true]{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+.rbox a{color:var(--gold)}
+/* product cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:28px 22px}
+.card{position:relative;display:flex;flex-direction:column}
+.card .im{aspect-ratio:4/5;background:#efeae0;overflow:hidden;display:grid;place-items:center;position:relative}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover .im img{transform:scale(1.05)}
+.ph0{padding:20px;text-align:center;font:italic 500 22px var(--serif);color:var(--navy)}.ph0 small{display:block;font:500 12px var(--sans);letter-spacing:.1em;color:var(--mut);margin-top:6px}
+.card h3{font-size:21px;margin:14px 0 2px;line-height:1.2}.card h3 a{text-decoration:none}.card h3 a::after{content:"";position:absolute;inset:0}
+.meta{font-size:14px;color:var(--mut)}.meta b{color:var(--navy);font-weight:600}
+.tag{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--tealD);font-weight:600;margin-top:8px}
+.more{margin-top:10px;font-weight:600;font-size:14px;color:var(--navy)}.more span{display:inline-block;transition:var(--t)}.card:hover .more span{transform:translateX(6px)}
+.qv{position:absolute;z-index:3;right:10px;top:10px;background:#fff;border:0;min-height:40px;padding:0 14px;font:600 13px var(--sans);cursor:pointer;opacity:0;transform:translateY(-4px);transition:var(--t);color:var(--navy)}
+.card:hover .qv,.qv:focus-visible{opacity:1;transform:none}
+@media(hover:none){.qv{opacity:1}}
+/* catalog */
+.ch{padding:64px 0 32px}.sf{display:flex;gap:10px;margin-top:28px;max-width:720px}
+.sf input{flex:1;min-height:56px;border:1.5px solid var(--navy);background:#fff;padding:0 18px;font:400 17px var(--sans);border-radius:var(--r)}
+.fl{display:grid;grid-template-columns:230px 1fr;gap:48px;padding-bottom:96px}
+.fl fieldset{border:0;padding:0}.fl legend{font:700 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--tealD);margin-bottom:12px}
+.fl label{display:flex;gap:10px;align-items:center;padding:7px 0;cursor:pointer;font-size:16px}.fl input[type=radio]{accent-color:var(--navy);width:18px;height:18px}
+.bar{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-bottom:24px;min-height:40px}
+.chip{background:var(--navy);color:#fff;border:0;padding:6px 12px;font:500 14px var(--sans);cursor:pointer}
+.lk{background:none;border:0;text-decoration:underline;cursor:pointer;color:var(--navy);font:500 14px var(--sans)}
+.fb{display:none}
+.empty{padding:56px 0;max-width:46ch}.empty h3{margin-bottom:10px}
+#gr{transition:opacity .2s}#gr.ld{opacity:.35}
+/* product page */
+.crumb{font-size:14px;color:var(--mut);padding:28px 0}.crumb a{text-decoration:none}.crumb a:hover{text-decoration:underline}
+.pd{display:grid;grid-template-columns:1.05fr 1fr;gap:64px;align-items:start}
+.gal .main{aspect-ratio:4/5;background:#efeae0;overflow:hidden;cursor:zoom-in;border:0;padding:0;width:100%;display:block}.gal img{width:100%;height:100%;object-fit:cover}
+.pd h1{font-size:clamp(34px,4.4vw,58px);margin:6px 0 18px}
+.dl{display:grid;grid-template-columns:130px 1fr;gap:0;margin:28px 0;border-top:1px solid var(--line)}
+.dl dt,.dl dd{padding:12px 0;border-bottom:1px solid var(--line);margin:0}.dl dt{color:var(--mut);font-size:14px}.dl dd{font-weight:500}
+.rel{padding:72px 0 96px;background:#f3efe6}
+/* story */
+.story{max-width:760px}.story p{margin:18px 0;color:#37445c}
+.story .big{font:500 italic 30px/1.3 var(--serif);color:var(--navy);border-left:4px solid var(--gold);padding-left:24px;margin:36px 0}
+/* contact */
+.cg{display:grid;grid-template-columns:1fr 1fr;gap:72px;padding:64px 0 96px}
+form label{display:block;font-weight:600;font-size:14px;margin:18px 0 6px}
+form input[type=text],form input[type=email],form textarea{width:100%;border:1.5px solid #9aa5b8;background:#fff;padding:13px 14px;font:400 17px var(--sans);border-radius:var(--r)}
+form input[aria-invalid=true],form textarea[aria-invalid=true]{border-color:#b3261e}
+.er{color:#b3261e;font-size:14px;min-height:20px}.ck{display:flex;gap:10px;align-items:flex-start;margin:18px 0;font-size:15px}.ck input{margin-top:5px;width:20px;height:20px;accent-color:var(--navy)}
+.ok{background:#e6f4ee;border-left:4px solid var(--tealD);padding:16px;margin-top:16px}
+address{font-style:normal;line-height:1.9}address a{color:var(--navy)}
+.cta2{background:var(--teal);padding:72px 0}.cta2 .wrap{display:flex;justify-content:space-between;gap:32px;align-items:center;flex-wrap:wrap}
+/* footer */
+footer{background:var(--navy);color:#d7deeb;padding:72px 0 28px;font-size:15px}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+footer h4{color:#fff;font:700 13px var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px}
+footer a{display:block;text-decoration:none;padding:4px 0;color:#d7deeb}footer a:hover{color:var(--gold)}
+footer .lg{background:#fff;padding:10px;width:150px;margin-bottom:16px}
+.fbm{border-top:1px solid #ffffff2e;margin-top:48px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px}
+/* modal */
+dialog{border:0;padding:0;max-width:880px;width:calc(100% - 32px);background:var(--bg);margin:auto}
+dialog::backdrop{background:rgba(15,25,45,.65)}
+.mq{display:grid;grid-template-columns:1fr 1fr}.mq .mi{background:#efeae0}.mq .mi img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.mq .mt{padding:36px;display:flex;flex-direction:column;gap:10px}
+.x{position:absolute;right:8px;top:8px;width:44px;height:44px;border:0;background:#fff;font-size:26px;cursor:pointer;color:var(--navy);z-index:2}
+#lb img{max-height:88vh;width:auto;margin:auto}#lb{background:#000;max-width:96vw}
+.r{opacity:0;transform:translateY(14px);transition:opacity .7s,transform .7s}.r.in{opacity:1;transform:none}
+@media(max-width:960px){
+.mb{display:grid;margin-left:auto}nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;padding:16px 24px 24px;border-bottom:1px solid var(--line);gap:6px}
+nav.o{display:flex}nav a{font-size:19px;padding:10px 0;min-height:44px}.sb.d{display:none}
+.hero{grid-template-columns:1fr;min-height:0}.hero .ph{height:46vh;order:-1}.hero .tx{padding:36px 24px 56px}
+.intro,.rgg,.pd,.cg,.fg{grid-template-columns:1fr;gap:36px}.sec{padding:64px 0}
+.col>*{grid-column:span 12!important;min-height:240px}.c1{min-height:340px!important}
+.fl{grid-template-columns:1fr}.fb{display:inline-flex;margin-bottom:12px}.fs{display:none;background:#fff;padding:20px;border:1px solid var(--line);margin-bottom:20px}.fs.o{display:block}
+.mq{grid-template-columns:1fr}.mq .mi img{min-height:0;max-height:300px}.grid{grid-template-columns:repeat(2,1fr);gap:22px 12px}.card h3{font-size:18px}.dl{grid-template-columns:110px 1fr}}
+@media(max-width:380px){.grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.r{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<a href="#main" class="btn" style="position:absolute;left:-999px" onfocus="this.style.left='8px'" onblur="this.style.left='-999px'" data-i="skip">Vai al contenuto</a>
+<header id="hd"><div class="wrap hb">
+<a class="logo" href="#/" aria-label="Noi, la Qualità"><img src="img/logo.jpg" alt="Noi, la qualità srl" width="105" height="60"></a>
+<button class="sb d" id="sbm" aria-label="Cerca" data-ia="aria-label:search" style="margin-left:auto"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></button>
+<nav id="nv" aria-label="Menu"><a href="#/" data-r="home" data-i="n_home">Home</a><a href="#/prodotti" data-r="prodotti" data-i="n_prod">Prodotti</a><a href="#/regioni" data-r="regioni" data-i="n_reg">Regioni</a><a href="#/storia" data-r="storia" data-i="n_story">La nostra storia</a><a href="#/contatti" data-r="contatti" data-i="n_cont">Contatti</a>
+<div class="ln" role="group" aria-label="Lingua"><button data-l="it" aria-pressed="true">IT</button><button data-l="en" aria-pressed="false">EN</button></div></nav>
+<button class="sb mb" id="mbt" aria-label="Menu" aria-expanded="false" aria-controls="nv"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18M3 12h18M3 17h18"/></svg></button>
+</div></header>
+<main id="main" tabindex="-1">
+
+<section class="v" id="v-home">
+<div class="hero"><div class="tx"><p class="eye" data-i="h_eye">Catalogo prodotti 2026</p>
+<h1 data-i="h_h1">Il gusto dell’Italia, <em>scelto con qualità.</em></h1>
+<p class="lead" data-i="h_lead">Pasta, riso, salumi, formaggi, miele, sottoli, tonno, tartufi e alcolici: una selezione di specialità italiane, ora da sfogliare online.</p>
+<div class="cta"><a class="btn p" href="#/prodotti" data-i="h_c1">Esplora la collezione</a><a class="btn" href="#/storia" data-i="h_c2">Scopri la nostra storia</a></div></div>
+<div class="ph"><img src="img/hero.webp" alt="Cantina di stagionatura con salumi e formaggi" width="1800" height="1349" fetchpriority="high"><span data-i="h_cap">High quality food</span></div></div>
+
+<div class="sec"><div class="wrap intro"><div class="img r"><img src="img/salumi.webp" alt="Prosciutto stagionato" loading="lazy"></div>
+<div class="r"><p class="eye">Noi, la Qualità</p><h2 data-i="i_h">Una passione per l’autentico gusto italiano</h2><p data-i="i_p">Noi, la Qualità è un marchio del gruppo con sede a Roma. Il catalogo riunisce prodotti selezionati, ciascuno con il proprio codice, formato e descrizione.</p><a class="btn" href="#/storia" data-i="h_c2">Scopri la nostra storia</a></div></div></div>
+
+<div class="sec" style="padding-top:0"><div class="wrap"><p class="eye" data-i="c_eye">Collezione</p><h2 data-i="c_h">La nostra collezione italiana</h2>
+<div class="col" id="cols"></div></div></div>
+
+<div class="sec rg"><div class="wrap"><p class="eye" data-i="r_eye">Regioni</p><h2 data-i="r_h">Dal cuore d’Italia</h2><p class="lead" data-i="r_p">Scegli un’area d’Italia per vedere i prodotti collegati. Le regioni vengono assegnate ai prodotti dal pannello di amministrazione.</p>
+<div class="rgg"><div class="zones" id="zones1"></div><div class="rbox" id="rbox1" aria-live="polite"></div></div></div></div>
+
+<div class="sec"><div class="wrap"><p class="eye" data-i="f_eye">In evidenza</p><h2 data-i="f_h">Un gusto da scoprire</h2><div class="grid r" id="feat" style="margin-top:40px"></div></div></div>
+</section>
+
+<section class="v" id="v-prodotti">
+<div class="wrap ch"><h1 style="font-size:clamp(36px,5vw,64px)" data-i="p_h">I nostri prodotti</h1><p class="lead" style="margin-top:12px" data-i="p_p">Esplora la nostra selezione di specialità italiane.</p>
+<form class="sf" id="sf" role="search" onsubmit="return false"><label for="q" class="sr" style="position:absolute;left:-999px" data-i="p_sl">Cerca</label><input id="q" type="search" autocomplete="off" data-ip="placeholder:p_s" placeholder="Cerca prodotti, categorie o codici…"></form></div>
+<div class="wrap fl"><aside><button class="btn fb" id="fbt" aria-expanded="false" data-i="p_f">Filtri</button>
+<div class="fs" id="fs"><fieldset><legend data-i="p_cat">Categoria</legend><div id="catf"></div></fieldset></div></aside>
+<div><div class="bar"><strong id="cnt"></strong><span id="act"></span></div><div class="grid" id="gr" aria-live="polite"></div>
+<div class="empty" id="em" hidden><h3 data-i="e_h">Non abbiamo trovato questo prodotto</h3><p data-i="e_p">Prova con un altro termine o sfoglia una categoria.</p><button class="btn" id="cl" style="margin-top:16px" data-i="p_clear">Azzera filtri</button></div></div></div>
+</section>
+
+<section class="v" id="v-prodotto"><div class="wrap"><div class="crumb" id="crumb" role="navigation" aria-label="Breadcrumb"></div><div id="pdc"></div></div>
+<div class="rel"><div class="wrap"><h2 data-i="d_rel" style="margin-bottom:32px">Prodotti correlati</h2><div class="grid" id="relg"></div></div></div></section>
+
+<section class="v" id="v-regioni"><div class="wrap ch"><p class="eye" data-i="r_eye">Regioni</p><h1 style="font-size:clamp(36px,5vw,64px)" data-i="rp_h">Il gusto dell’Italia, regione per regione</h1></div>
+<div class="rg" style="padding:56px 0 80px"><div class="wrap"><div class="rgg" style="margin-top:0"><div class="zones" id="zones2"></div><div class="rbox" id="rbox2" aria-live="polite"></div></div>
+<div class="grid" id="rprod" style="margin-top:48px;color:var(--ink)"></div></div></div></section>
+
+<section class="v" id="v-storia"><div class="wrap" style="padding:72px 24px 96px"><div class="story"><p class="eye">Noi, la Qualità</p><h1 style="font-size:clamp(36px,5vw,64px)" data-i="s_h">Più che cibo. Una tradizione.</h1>
+<p class="lead" style="margin-top:20px" data-i="s_l">Gruppo Noi, la qualità srl, con sede a Roma, propone specialità italiane con il marchio High Quality Food.</p>
+<p class="big" data-i="s_b">Una selezione di prodotti italiani, dal campo alla cantina, raccolti in un unico catalogo.</p>
+<p data-i="s_p1">Il catalogo 2026 comprende pasta, riso, salumi, formaggi, miele, sottoli, tonno, tartufi e alcolici.</p>
+<p data-i="s_p2">Doppio Senso nasce dalla collaborazione con la Distilleria Morelli, realtà artigianale italiana che produce alcolici dal 1911: il gusto tradizionale del rum incontra l’innovazione del caramello salato.</p>
+<p data-i="s_p3">La storia dell’azienda verrà raccontata qui con i testi forniti dal cliente.</p></div></div></section>
+
+<section class="v" id="v-contatti"><div class="wrap"><div class="ch" style="padding-bottom:0"><h1 style="font-size:clamp(36px,5vw,64px)" data-i="k_h">Contatti</h1></div>
+<div class="cg"><div><p class="lead" data-i="k_p">Cerchi i nostri prodotti? Scrivici: ti risponderemo il prima possibile.</p>
+<address style="margin-top:28px"><strong>Gruppo Noi, la qualità srl</strong><br>Viale C. Sabatini, 161 – 00144 Roma<br><a href="tel:+390666995093">+39 06 66995093</a> · <a href="tel:+393791413514">+39 379 1413514</a><br><a href="mailto:info@noilaqualita.it">info@noilaqualita.it</a><br><a href="mailto:info@golosaqualita.it">info@golosaqualita.it</a></address>
+<p class="meta" style="margin-top:24px" data-i="k_ship">Spedizioni in Italia e all’estero: da definire al momento dell’ordine. Consegne su Roma entro il GRA gratuite.</p></div>
+<form id="cf" novalidate><label for="fn" data-i="k_n">Nome</label><input id="fn" type="text" autocomplete="name" required><div class="er" id="e_fn"></div>
+<label for="fe" data-i="k_e">Email</label><input id="fe" type="email" autocomplete="email" required><div class="er" id="e_fe"></div>
+<label for="fc" data-i="k_c">Azienda</label><input id="fc" type="text" autocomplete="organization">
+<label for="fm" data-i="k_m">Messaggio</label><textarea id="fm" rows="5" required></textarea><div class="er" id="e_fm"></div>
+<div class="ck"><input id="fk" type="checkbox" required><label for="fk" style="margin:0;font-weight:400" data-i="k_k">Acconsento al trattamento dei miei dati per rispondere a questa richiesta.</label></div><div class="er" id="e_fk"></div>
+<button class="btn p" type="submit" data-i="k_s">Invia richiesta</button><div id="fok" class="ok" hidden role="status"></div></form></div></div></section>
+
+<section class="v" id="v-404"><div class="wrap" style="padding:120px 24px;text-align:left"><h1 data-i="x_h">Questa pagina non è nel nostro menù.</h1><div class="cta" style="margin-top:28px"><a class="btn p" href="#/" data-i="x_a">Torna alla home</a><a class="btn" href="#/prodotti" data-i="x_b">Esplora i prodotti</a></div></div></section>
+
+<section class="cta2" id="cta2"><div class="wrap"><h2 data-i="t_h">Cerchi i nostri prodotti?</h2><div class="cta"><a class="btn" href="#/contatti" style="background:var(--navy);color:#fff" data-i="t_a">Contattaci</a><a class="btn" href="#/prodotti" data-i="h_c1">Esplora la collezione</a></div></div></section>
+</main>
+<footer><div class="wrap"><div class="fg"><div><img class="lg" src="img/logo.jpg" alt="Noi, la qualità srl" loading="lazy"><p>Gruppo Noi, la qualità srl<br>Viale C. Sabatini, 161<br>00144 Roma – Italy<br><a href="tel:+390666995093">+39 06 66995093</a><a href="mailto:info@noilaqualita.it">info@noilaqualita.it</a></p></div>
+<div><h4 data-i="n_nav">Navigazione</h4><a href="#/" data-i="n_home">Home</a><a href="#/prodotti" data-i="n_prod">Prodotti</a><a href="#/regioni" data-i="n_reg">Regioni</a><a href="#/storia" data-i="n_story">La nostra storia</a><a href="#/contatti" data-i="n_cont">Contatti</a></div>
+<div><h4 data-i="p_cat">Categoria</h4><div id="fcat"></div></div>
+<div><h4 data-i="n_lang">Lingua</h4><a href="#" data-l="it">Italiano</a><a href="#" data-l="en">English</a><h4 style="margin-top:20px">Legal</h4><a href="#/contatti" data-i="n_priv">Privacy</a><a href="#/contatti" data-i="n_cook">Informativa cookie</a></div></div>
+<div class="fbm"><span>© 2026 Gruppo Noi, la qualità srl</span><span data-i="n_ck">Questo sito non usa cookie di profilazione.</span></div></div></footer>
+
+<dialog id="qvd" aria-labelledby="qvt"><button class="x" aria-label="Chiudi" data-ia="aria-label:close">×</button><div class="mq" id="qvb"></div></dialog>
+<dialog id="lb" aria-label="Immagine"><button class="x" aria-label="Chiudi" data-ia="aria-label:close">×</button><img alt="" id="lbi"></dialog>
+
+<script>
+const D=[{"c":"NQE217","n":"Spaghettoni","w":"500 g","k":"pasta","img":"spaghettoni","d":"Pasta di semola di grano duro, trafilata al bronzo e essiccata a bassa temperatura, in formato spaghettoni da 500 g."},{"c":"NQE204","n":"Mezzo Pacchero","w":"500 g","k":"pasta"},{"c":"NQE202","n":"Lumaconi","w":"500 g","k":"pasta"},{"c":"NQE203","n":"Mezze Maniche","w":"500 g","k":"pasta"},{"c":"NQE205","n":"Penne lisce o rigate","w":"500 g","k":"pasta"},{"c":"NQE206","n":"Tubettoni lisci o rigati","w":"500 g","k":"pasta"},{"c":"NQE208","n":"Rigatoni","w":"500 g","k":"pasta"},{"c":"NQE209","n":"Fusillone","w":"500 g","k":"pasta"},{"c":"NQE207","n":"Fettuccine","w":"500 g","k":"pasta"},{"c":"NQE216","n":"Mafalde","w":"500 g","k":"pasta"},{"c":"NQE210","n":"Linguine","w":"500 g","k":"pasta"},{"c":"NQE212","n":"Taccole","w":"500 g","k":"pasta"},{"c":"NQE213","n":"Paccheri","w":"500 g","k":"pasta"},{"c":"NQE215","n":"Ziti tagliati","w":"500 g","k":"pasta"},{"c":"NQE211","n":"Pasta mista","w":"500 g","k":"pasta"},{"c":"NQE214","n":"Tubettini","w":"500 g","k":"pasta"},{"c":"NQBM1201","n":"Tonnarelli di Campofilone","w":"250 g","k":"pasta"},{"c":"NQBM1202","n":"Tagliatelle di Campofilone","w":"250 g","k":"pasta"},{"c":"NQBM1203","n":"Pappardelle di Campofilone","w":"250 g","k":"pasta"},{"c":"NQBM1204","n":"Fettuccine di Campofilone","w":"250 g","k":"pasta"},{"c":"NQBM1205","n":"Sfoglia per lasagna di Campofilone","w":"250 g","k":"pasta"},{"c":"NQBM1206","n":"Maccheroncini di Campofilone","w":"250 g","k":"pasta"},{"c":"NQBM1207","n":"Linguine di Campofilone","w":"250 g","k":"pasta"},{"c":"NQBM1208","n":"Fettuccine di Campofilone al tartufo","w":"250 g","k":"pasta"},{"c":"NQBM1209","n":"Fettuccine di Campofilone ai funghi","w":"250 g","k":"pasta"},{"c":"NQBM1210","n":"Fettuccine di Campofilone al peperoncino","w":"250 g","k":"pasta"},{"c":"NQBM1211","n":"Fettuccine di Campofilone allo zafferano","w":"250 g","k":"pasta"},{"c":"NQMVD2101","n":"Pici, semola integrale","w":"500 g","k":"pasta"},{"c":"NQMVD2102","n":"Pappardelle, semola integrale","w":"500 g","k":"pasta"},{"c":"NQMVD2103","n":"Tagliatelle, semola integrale","w":"500 g","k":"pasta"},{"c":"NQMVD2107","n":"Paccheri, semola integrale","w":"500 g","k":"pasta"},{"c":"NQMVD2109","n":"Penne, semola integrale","w":"500 g","k":"pasta"},{"c":"NQMVD2138","n":"Fusilli di farro monococco","w":"500 g","k":"pasta"},{"c":"NQMVD2139","n":"Pennette di farro monococco","w":"500 g","k":"pasta"},{"c":"NQMVD2140","n":"Tagliatelle di farro monococco","w":"500 g","k":"pasta"},{"c":"NQRA1109","n":"Riso Grancavour","w":"500 g","k":"riso"},{"c":"NQRA1110","n":"Riso Rubinum","w":"500 g","k":"riso"},{"c":"NQRA1111","n":"Riso Ebano","w":"500 g","k":"riso"},{"c":"NQRA1105","n":"Riso Carnaroli","w":"500 g","k":"riso"},{"c":"NQRA1106","n":"Riso Arborio","w":"500 g","k":"riso"},{"c":"NQRA1107","n":"Riso nero integrale medio","w":"500 g","k":"riso"},{"c":"NQRA1108","n":"Riso rosso integrale lungo","w":"500 g","k":"riso"},{"c":"NQRA1101","n":"Riso Carnaroli","w":"1 kg","k":"riso"},{"c":"NQRA1102","n":"Riso Arborio","w":"1 kg","k":"riso"},{"c":"NQRA1103","n":"Riso Baldo","w":"1 kg","k":"riso"},{"c":"NQRA1104","n":"Riso Roma","w":"1 kg","k":"riso"},{"c":"NQS401","n":"Salame Strolghino","w":"peso variabile 0,2–0,3 kg","k":"salumi"},{"c":"NQS402","n":"Salame Mariola","w":"peso variabile da 0,6 kg","k":"salumi"},{"c":"NQS404","n":"Spalla cotto","w":"peso variabile 7,5–8,0 kg","k":"salumi"},{"c":"NQS405","n":"Cuor di prosciutto","w":"peso variabile da 5,0 kg","k":"salumi"},{"c":"NQS406","n":"Gola guanciale","w":"peso variabile 1,0–1,5 kg","k":"salumi"},{"c":"NQS407","n":"Prosciutto Parma 24 mesi con osso","w":"peso variabile 7,0–8,5 kg","k":"salumi"},{"c":"NQS408","n":"Prosciutto Parma 24 mesi senza osso","w":"peso variabile 7,0–8,5 kg","k":"salumi"},{"c":"NQS409","n":"Prosciutto Parma 30 mesi con osso","w":"peso variabile 7,0–8,5 kg","k":"salumi"},{"c":"NQS410","n":"Prosciutto Parma 30 mesi senza osso","w":"peso variabile 7,0–8,5 kg","k":"salumi"},{"c":"NQS403","n":"Mortadella nostrana con pistacchi","w":"peso variabile da 6,0 kg","k":"salumi"},{"c":"NQR100","n":"Lardo nostrano","w":"peso variabile 0,4–3,0 kg","k":"salumi"},{"c":"NQP501","n":"Prosciutto San Daniele con osso","w":"peso variabile 6,0–9,0 kg","k":"salumi","img":"sandaniele","d":"Il prosciutto con osso è una scelta da intenditore: si gusta tagliandolo a mano, per assaporarne il gusto pieno."},{"c":"NQP502","n":"Prosciutto San Daniele disossato non pressato","w":"peso variabile 6,0–9,0 kg","k":"salumi"},{"c":"NQP503","n":"Prosciutto San Daniele disossato riservato legato a mano","w":"peso variabile 6,0–9,0 kg","k":"salumi"},{"c":"NQP504","n":"Prosciutto San Daniele pronto fetta","w":"peso variabile 4,0–5,0 kg","k":"salumi"},{"c":"NQF903","n":"Caciocavallo affinato in grotta","w":"1,6 kg","k":"formaggi"},{"c":"NQF910","n":"Caciocavallo affinato in grotta","w":"5 kg","k":"formaggi"},{"c":"NQF905","n":"Caciocavallo affinato in vinaccia","w":"1,6 kg","k":"formaggi"},{"c":"NQF908","n":"Caciocavallo affumicato","w":"1,4 kg","k":"formaggi"},{"c":"NQF907","n":"Caciocavallo al peperoncino","w":"1,4 kg","k":"formaggi"},{"c":"NQF904","n":"Caciocavallo stravecchio","w":"1,5 kg","k":"formaggi"},{"c":"NQF906","n":"Caciocavallo al tartufo","w":"1,3 kg","k":"formaggi"},{"c":"NQF902","n":"Caciocavallo fresco","w":"1,1 kg","k":"formaggi","img":"formaggi","d":"Forma a pera con testa, crosta liscia e omogenea di colore giallo paglierino, struttura compatta, elastica e morbida. Aroma intenso di latte cotto. Stagionatura 30–45 giorni.","ing":"Latte, siero innesto, sale, caglio."},{"c":"NQF911","n":"Caciocavallo occhio dolce","w":"5 kg","k":"formaggi"},{"c":"NQF922","n":"Caciocavallo affinato in grotta","w":"5 kg","k":"formaggi"},{"c":"NQF919","n":"Caciotta giovane di capra “Bertu”","w":"1,8 kg","k":"formaggi"},{"c":"NQF916","n":"Caciotta giovane di pecora Biasu","w":"3 kg","k":"formaggi"},{"c":"NQF917","n":"Pecorino Bustianu","w":"3,5 kg","k":"formaggi"},{"c":"NQF918","n":"Pecorino maturo Bobore","w":"5,2 kg","k":"formaggi"},{"c":"NQF923","n":"Cilentano, pecorino semistagionato","w":"2,5 kg","k":"formaggi"},{"c":"NQF924","n":"In Grotta, formaggio di capra","w":"3,0 kg","k":"formaggi"},{"c":"NQTR1704","n":"La Regina Bianca","w":"1,5–2,0 kg","k":"formaggi"},{"c":"NQTR1707","n":"L’Ambasciatrice","w":"1,5–2,0 kg","k":"formaggi"},{"c":"NQTR1715","n":"Il Super Tomato Reale","w":"2,8–4,0 kg","k":"formaggi"},{"c":"NQTR1731","n":"Blu Dolce erborinato","w":"2,8–3,5 kg","k":"formaggi"},{"c":"NQTR1751","n":"Piradoro","w":"3,5–4,5 kg","k":"formaggi"},{"c":"GLQ009","n":"Caciotta di pecora Superlativo","w":"1,5–1,8 kg","k":"formaggi"},{"c":"GLQ010","n":"Caciotta di pecora “Il Maxi Superlativo”","w":"2,5–3,0 kg","k":"formaggi"},{"c":"NQAF001","n":"Miele di ailanto","w":"45 g","k":"miele"},{"c":"NQAF002","n":"Miele di ailanto","w":"500 g","k":"miele"},{"c":"NQAF003","n":"Miele di ailanto","w":"1000 g","k":"miele"},{"c":"NQAF004","n":"Miele di castagno","w":"500 g","k":"miele"},{"c":"NQAF005","n":"Miele di castagno","w":"1000 g","k":"miele"},{"c":"NQAF006","n":"Miele di erica","w":"500 g","k":"miele"},{"c":"NQAF008","n":"Miele millefiori","w":"500 g","k":"miele"},{"c":"NQAF009","n":"Miele millefiori","w":"1000 g","k":"miele"},{"c":"NQAF010","n":"Miele Sulla bio","w":"500 g","k":"miele"},{"c":"NQAF011","n":"Miele Sulla bio","w":"1000 g","k":"miele"},{"c":"NQAF007","n":"Miele di macchia mediterranea","w":"1000 g","k":"miele"},{"c":"NQC1404","n":"Carciofi arrostiti all’olio","w":"580 g","k":"sottoli"},{"c":"NQC1401","n":"Carciofi interi all’olio","w":"500 g","k":"sottoli"},{"c":"NQC1429","n":"Friarelli all’olio","w":"580 g","k":"sottoli"},{"c":"NQC1415","n":"Funghi di muschio all’olio","w":"580 g","k":"sottoli"},{"c":"NQC1410","n":"Funghi pioppini al naturale","w":"580 g","k":"sottoli"},{"c":"NQC1421","n":"Melanzane a fette all’olio","w":"580 g","k":"sottoli"},{"c":"NQC1426","n":"Peperonata alla contadina all’olio","w":"580 g","k":"sottoli"},{"c":"NQC1432","n":"Scarole con olive e capperi","w":"580 g","k":"sottoli"},{"c":"NQC1435","n":"Pesche allo sciroppo","w":"580 g","k":"sottoli"},{"c":"GLQ007","n":"Passata di pomodoro","w":"12 × 690 g","k":"sottoli"},{"c":"GLQ006","n":"Pomodori pelati San Marzano","w":"6 × 2,5 kg","k":"sottoli"},{"c":"NQG304","n":"Colatura di alici","w":"100 ml","k":"tonno"},{"c":"NQG312","n":"Tocchetti di tonno rosso","w":"220 g","k":"tonno"},{"c":"NQG301","n":"Tonno rosso","w":"310 g","k":"tonno","img":"tonno","d":"Il tonno rosso, la varietà più pregiata tra i pesci pelagici. Cotto esclusivamente in acqua bollente e sale marino, conservato in olio di oliva e tagliato artigianalmente in filetti.","origin":"Mar Mediterraneo"},{"c":"NQG302","n":"Tonno rosso","w":"575 g","k":"tonno"},{"c":"NQG310","n":"Tonnetto alletterato","w":"220 g","k":"tonno"},{"c":"NQG311","n":"Tonnetto alletterato","w":"310 g","k":"tonno"},{"c":"NQG309","n":"Filetti di tonno alalunga","w":"220 g","k":"tonno"},{"c":"NQG307","n":"Filetti di tonno alalunga","w":"310 g","k":"tonno"},{"c":"NQG303","n":"Filetti di tonno alalunga","w":"575 g","k":"tonno"},{"c":"NQMT1301","n":"Cremosa al tartufo","w":"90 g","k":"tartufi"},{"c":"NQMT1302","n":"Cremosa al tartufo","w":"180 g","k":"tartufi"},{"c":"NQMT1303","n":"Cremosa al tartufo","w":"500 g","k":"tartufi"},{"c":"NQMT1310","n":"Crema Regina al tartufo bianco","w":"90 g","k":"tartufi"},{"c":"NQMT1311","n":"Crema Regina al tartufo bianco","w":"180 g","k":"tartufi","img":"tartufi","d":"Condimento a base di formaggi e tartufo.","ing":"Besciamella, panna, mascarpone, Parmigiano Reggiano e tartufo (elenco completo come da etichetta del prodotto)."},{"c":"NQMT1312","n":"Crema Regina al tartufo bianco","w":"500 g","k":"tartufi"},{"c":"NQMT1313","n":"Condimento a base di burro e tartufo","w":"90 g","k":"tartufi"},{"c":"NQMT1314","n":"Condimento a base di burro e tartufo","w":"180 g","k":"tartufi"},{"c":"NQMT1316","n":"Condimento a base di burro e tartufo","w":"500 g","k":"tartufi"},{"c":"NQMT1315","n":"Condimento a base di burro e tartufo estivo","w":"500 g","k":"tartufi"},{"c":"NQMT1317","n":"Condimento aromatizzato al tartufo bianco","w":"250 ml","k":"tartufi"},{"c":"NQMT1318","n":"Condimento aromatizzato al tartufo bianco","w":"500 ml","k":"tartufi"},{"c":"NQMT1324","n":"Briciola al tartufo estivo congelato","w":"70 g","k":"tartufi"},{"c":"GLQ008","n":"Doppio Senso, rum al caramello salato","w":"0,1 l","k":"alcolici"},{"c":"GLQ003","n":"Doppio Senso, rum al caramello salato","w":"0,7 l","k":"alcolici"},{"c":"GLQ004","n":"Doppio Senso, rum al caramello salato","w":"0,7 l","k":"alcolici","img":"alcolici","d":"Nato dalla collaborazione tra Noi, la Qualità e la Distilleria Morelli, attiva dal 1911: il gusto tradizionale del rum incontra il caramello salato. 35% vol.","origin":"Toscana (Distilleria Morelli, Valdera)","reg":"toscana"},{"c":"GLQ005","n":"Doppio Senso, rum al caramello salato","w":"1,5 l","k":"alcolici"},{"c":"GLQ002","n":"Doppio Senso, rum al caramello salato","w":"1,5 l","k":"alcolici"},{"c":"GLQ001","n":"Doppio Senso, rum al caramello salato","w":"4,5 l","k":"alcolici"},{"c":"NQM002","n":"Grappa toscana","w":"0,70 l","k":"alcolici"},{"c":"NQM006","n":"Grappa toscana invecchiata","w":"0,70 l","k":"alcolici"},{"c":"NQM020","n":"Grappa di Moscato","w":"0,70 l","k":"alcolici"},{"c":"NQM031","n":"Grappa di Brunello","w":"0,70 l","k":"alcolici"},{"c":"NQM059","n":"Amaretto della Torre","w":"0,70 l","k":"alcolici"},{"c":"NQM062","n":"Amaro Etrusco","w":"0,70 l","k":"alcolici"},{"c":"NQM072","n":"Limoncino","w":"0,50 l","k":"alcolici"},{"c":"NQM094","n":"Gin botanico","w":"0,70 l","k":"alcolici"},{"c":"NQM122","n":"Sambuca","w":"0,70 l","k":"alcolici"},{"c":"NQM129","n":"Aperitivo di Toscana","w":"1,00 l","k":"alcolici"}];
+const CATS=['pasta','riso','salumi','formaggi','miele','sottoli','tonno','tartufi','alcolici'];
+const CI={pasta:['Pasta','Pasta'],riso:['Riso','Rice'],salumi:['Salumi','Cured meats'],formaggi:['Formaggi','Cheese'],miele:['Miele','Honey'],sottoli:['Sottoli e conserve','Preserves'],tonno:['Tonno e pesce','Tuna & seafood'],tartufi:['Tartufi','Truffle'],alcolici:['Alcolici e liquori','Spirits & liqueurs']};
+const CIMG={pasta:'pasta',salumi:'salumi',formaggi:'formaggi',sottoli:'sottoli',tonno:'tonno',tartufi:'tartufo',alcolici:'alcolici'};
+const ZONES={nord:['Nord Italia','Northern Italy',['Valle d’Aosta','Piemonte','Lombardia','Liguria','Trentino-Alto Adige','Veneto','Friuli Venezia Giulia','Emilia-Romagna']],centro:['Centro Italia','Central Italy',['Toscana','Umbria','Marche','Lazio']],sud:['Sud Italia','Southern Italy',['Abruzzo','Molise','Campania','Puglia','Basilicata','Calabria']],isole:['Isole','Italian Islands',['Sicilia','Sardegna']]};
+const slug=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'');
+const T={it:{n_home:'Home',n_prod:'Prodotti',n_reg:'Regioni',n_story:'La nostra storia',n_cont:'Contatti',skip:'Vai al contenuto',h_eye:'Catalogo prodotti 2026',h_h1:'Il gusto dell’Italia, <em>scelto con qualità.</em>',h_lead:'Pasta, riso, salumi, formaggi, miele, sottoli, tonno, tartufi e alcolici: una selezione di specialità italiane, ora da sfogliare online.',h_c1:'Esplora la collezione',h_c2:'Scopri la nostra storia',h_cap:'High quality food',i_h:'Una passione per l’autentico gusto italiano',i_p:'Noi, la Qualità è un marchio del gruppo con sede a Roma. Il catalogo riunisce prodotti selezionati, ciascuno con il proprio codice, formato e descrizione.',c_eye:'Collezione',c_h:'La nostra collezione italiana',r_eye:'Regioni',r_h:'Dal cuore d’Italia',r_p:'Scegli un’area d’Italia per vedere i prodotti collegati. Le regioni vengono assegnate ai prodotti dal pannello di amministrazione.',f_eye:'In evidenza',f_h:'Un gusto da scoprire',p_h:'I nostri prodotti',p_p:'Esplora la nostra selezione di specialità italiane.',p_s:'Cerca prodotti, categorie o codici…',p_sl:'Cerca',p_f:'Filtri',p_cat:'Categoria',p_all:'Tutte',e_h:'Non abbiamo trovato questo prodotto',e_p:'Prova con un altro termine o sfoglia una categoria.',p_clear:'Azzera filtri',res:'prodotti',res1:'prodotto',disc:'Scopri il prodotto',qv:'Anteprima',vf:'Vedi scheda completa',code:'Codice',wt:'Formato',cat:'Categoria',org:'Origine',ing:'Ingredienti',reg:'Regione',about:'Informazioni sul prodotto',det:'Dettagli prodotto',d_rel:'Prodotti correlati',ask:'Richiedi informazioni',noreg:'Nessun prodotto è ancora assegnato a questa regione.',zoneh:'Seleziona una regione',allz:'Tutta l’area',rp_h:'Il gusto dell’Italia, regione per regione',s_h:'Più che cibo. Una tradizione.',s_l:'Gruppo Noi, la qualità srl, con sede a Roma, propone specialità italiane con il marchio High Quality Food.',s_b:'Una selezione di prodotti italiani, dal campo alla cantina, raccolti in un unico catalogo.',s_p1:'Il catalogo 2026 comprende pasta, riso, salumi, formaggi, miele, sottoli, tonno, tartufi e alcolici.',s_p2:'Doppio Senso nasce dalla collaborazione con la Distilleria Morelli, realtà artigianale italiana che produce alcolici dal 1911: il gusto tradizionale del rum incontra l’innovazione del caramello salato.',s_p3:'La storia dell’azienda verrà raccontata qui con i testi forniti dal cliente.',k_h:'Contatti',k_p:'Cerchi i nostri prodotti? Scrivici: ti risponderemo il prima possibile.',k_ship:'Spedizioni in Italia e all’estero: da definire al momento dell’ordine. Consegne su Roma entro il GRA gratuite.',k_n:'Nome',k_e:'Email',k_c:'Azienda',k_m:'Messaggio',k_k:'Acconsento al trattamento dei miei dati per rispondere a questa richiesta.',k_s:'Invia richiesta',ev_r:'Campo obbligatorio.',ev_e:'Inserisci un indirizzo email valido.',ok:'Si aprirà il tuo programma di posta con il messaggio pronto da inviare.',x_h:'Questa pagina non è nel nostro menù.',x_a:'Torna alla home',x_b:'Esplora i prodotti',t_h:'Cerchi i nostri prodotti?',t_a:'Contattaci',n_nav:'Navigazione',n_lang:'Lingua',n_priv:'Privacy',n_cook:'Informativa cookie',n_ck:'Questo sito non usa cookie di profilazione.',search:'Cerca',close:'Chiudi',noen:'',expl:'Esplora',home:'Home',desc_ph:'Descrizione in arrivo.',cexp:{pasta:'Formati classici, pasta fresca di Campofilone e semola integrale.',riso:'Carnaroli, Arborio, Baldo, Roma e varietà integrali.',salumi:'Prosciutti, salami e specialità da stagionatura.',formaggi:'Caciocavalli, pecorini e formaggi di capra e di mucca.',miele:'Ailanto, castagno, erica, millefiori e altri.',sottoli:'Verdure all’olio, pomodori e conserve.',tonno:'Tonno rosso, alalunga e colatura di alici.',tartufi:'Creme e condimenti al tartufo.',alcolici:'Doppio Senso e liquori della Distilleria Morelli.'}},
+en:{n_home:'Home',n_prod:'Products',n_reg:'Regions',n_story:'Our story',n_cont:'Contact',skip:'Skip to content',h_eye:'Product catalogue 2026',h_h1:'The taste of Italy, <em>curated with quality.</em>',h_lead:'Pasta, rice, cured meats, cheese, honey, preserves, tuna, truffle and spirits: a selection of Italian specialities, now to browse online.',h_c1:'Explore the collection',h_c2:'Discover our story',h_cap:'High quality food',i_h:'A passion for authentic Italian taste',i_p:'Noi, la Qualità is a brand of the group based in Rome. The catalogue gathers selected products, each with its own code, size and description.',c_eye:'Collection',c_h:'Our Italian collection',r_eye:'Regions',r_h:'From the heart of Italy',r_p:'Pick an area of Italy to see its products. Regions are assigned to products from the admin panel.',f_eye:'Featured',f_h:'A taste worth discovering',p_h:'Our products',p_p:'Explore our selection of Italian specialities.',p_s:'Search products, categories or codes…',p_sl:'Search',p_f:'Filters',p_cat:'Category',p_all:'All',e_h:'We couldn’t find that product',e_p:'Try another term or browse a category.',p_clear:'Clear filters',res:'products',res1:'product',disc:'Discover product',qv:'Quick view',vf:'View full product',code:'Code',wt:'Size',cat:'Category',org:'Origin',ing:'Ingredients',reg:'Region',about:'About this product',det:'Product details',d_rel:'Related products',ask:'Request information',noreg:'No product is assigned to this region yet.',zoneh:'Select a region',allz:'Whole area',rp_h:'Taste Italy by region',s_h:'More than food. A tradition.',s_l:'Gruppo Noi, la qualità srl, based in Rome, offers Italian specialities under the High Quality Food mark.',s_b:'A selection of Italian products, from the field to the cellar, gathered in one catalogue.',s_p1:'The 2026 catalogue covers pasta, rice, cured meats, cheese, honey, preserves, tuna, truffle and spirits.',s_p2:'Doppio Senso was born from a collaboration with Distilleria Morelli, an Italian craft distillery producing spirits since 1911: the traditional taste of rum meets the innovation of salted caramel.',s_p3:'The company history will be told here using texts supplied by the client.',k_h:'Contact',k_p:'Looking for our products? Write to us and we will reply as soon as possible.',k_ship:'Shipping in Italy and abroad: to be defined when ordering. Free delivery in Rome within the GRA ring road.',k_n:'Name',k_e:'Email',k_c:'Company',k_m:'Message',k_k:'I consent to my data being processed to answer this request.',k_s:'Send request',ev_r:'This field is required.',ev_e:'Enter a valid email address.',ok:'Your email program will open with the message ready to send.',x_h:'This page isn’t on our menu.',x_a:'Return home',x_b:'Explore products',t_h:'Looking for our products?',t_a:'Contact us',n_nav:'Navigation',n_lang:'Language',n_priv:'Privacy',n_cook:'Cookie information',n_ck:'This site uses no profiling cookies.',search:'Search',close:'Close',expl:'Explore',home:'Home',desc_ph:'Description coming soon.',cexp:{pasta:'Classic shapes, fresh Campofilone pasta and wholewheat semolina.',riso:'Carnaroli, Arborio, Baldo, Roma and wholegrain varieties.',salumi:'Hams, salami and cured specialities.',formaggi:'Caciocavallo, pecorino, goat and cow’s milk cheeses.',miele:'Ailanthus, chestnut, heather, wildflower and more.',sottoli:'Vegetables in oil, tomatoes and preserves.',tonno:'Bluefin and albacore tuna, anchovy essence.',tartufi:'Truffle creams and dressings.',alcolici:'Doppio Senso and Distilleria Morelli liqueurs.'}}};
+let L=localStorage.getItem('l')||'it';const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const t=k=>(T[L][k]??T.it[k]??k);const cn=c=>CI[c][L=='en'?1:0];
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+D.forEach(p=>p.id=p.c.toLowerCase());
+function card(p,showQV=true){const im=p.img?`<img src="img/${p.img}.webp" alt="${esc(p.n)} ${esc(p.w)}" loading="lazy">`:`<div class="ph0">${esc(cn(p.k))}<small>${esc(p.c)}</small></div>`;
+return `<article class="card"><div class="im">${im}</div>${showQV?`<button class="qv" data-q="${p.id}" aria-label="${t('qv')}: ${esc(p.n)}">${t('qv')}</button>`:''}<h3><a href="#/prodotto/${p.id}">${esc(p.n)}</a></h3><div class="meta"><b>${p.c}</b> · ${esc(p.w)}</div><div class="tag">${cn(p.k)}</div>${p.origin?`<div class="meta">${t('org')}: ${esc(p.origin)}</div>`:''}<div class="more">${t('disc')} <span>→</span></div></article>`}
+function applyI18n(){document.documentElement.lang=L;$$('[data-i]').forEach(e=>{const v=T[L][e.dataset.i]??T.it[e.dataset.i];if(v!=null)e.innerHTML=v});
+$$('[data-ip]').forEach(e=>e.placeholder=t('p_s'));$$('[data-ia]').forEach(e=>e.setAttribute('aria-label',t(e.dataset.ia.split(':')[1])));
+$$('[data-l]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.l==L));$('#mbt').setAttribute('aria-label','Menu');buildStatic();route()}
+$$('[data-l]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();L=b.dataset.l;localStorage.setItem('l',L);applyI18n()}));
+/* static builders */
+const F=['NQE217','NQP501','NQF902','NQG301','NQMT1311','GLQ004'];
+function buildStatic(){
+const layout=['c1','c2','c3','c4','c5','c6','c7','c8','c9'];
+$('#cols').innerHTML=CATS.map((c,i)=>{const im=CIMG[c],inn=`<div class="in"><h3>${cn(c)}</h3><p>${t('cexp')[c]}</p><b>${t('expl')}</b></div>`;
+return im?`<a class="tile ${layout[i]}" href="#/prodotti/${c}"><img src="img/${im}.webp" alt="" loading="lazy">${inn}</a>`:`<a class="tile txt ${i%2?'t2':''} ${layout[i]}" href="#/prodotti/${c}">${inn}</a>`}).join('');
+$('#feat').innerHTML=F.map(c=>card(D.find(p=>p.c==c))).join('');
+$('#catf').innerHTML=['',...CATS].map(c=>`<label><input type="radio" name="cf" value="${c}" ${(S.cat||'')==c?'checked':''}> ${c?cn(c):t('p_all')}</label>`).join('');
+$('#fcat').innerHTML=CATS.map(c=>`<a href="#/prodotti/${c}">${cn(c)}</a>`).join('');
+zones('1');zones('2')}
+/* regions */
+let ZS={z:'nord',r:null};
+function zones(n){const zb=$('#zones'+n);zb.innerHTML=Object.entries(ZONES).map(([k,z])=>`<button aria-pressed="${ZS.z==k}" data-z="${k}">${z[L=='en'?1:0]}<small>${z[2].length}</small></button>`).join('');
+const z=ZONES[ZS.z];const hits=D.filter(p=>p.reg&&(ZS.r?p.reg==ZS.r:z[2].some(r=>slug(r)==p.reg)));
+$('#rbox'+n).innerHTML=`<h3 style="color:#fff">${z[L=='en'?1:0]}</h3><ul>${z[2].map(r=>`<li><button data-rg="${slug(r)}" aria-pressed="${ZS.r==slug(r)}">${r}</button></li>`).join('')}</ul>${hits.length?`<p>${hits.length} ${hits.length>1?t('res'):t('res1')}:</p>${hits.map(p=>`<p><a href="#/prodotto/${p.id}">${esc(p.n)}</a> · ${p.c}</p>`).join('')}`:`<p>${t('noreg')}</p>`}`;
+if(n=='2')$('#rprod').innerHTML=hits.map(p=>card(p)).join('')}
+document.addEventListener('click',e=>{const z=e.target.closest('[data-z]'),r=e.target.closest('[data-rg]');if(z){ZS.z=z.dataset.z;ZS.r=null;zones('1');zones('2')}if(r){ZS.r=ZS.r==r.dataset.rg?null:r.dataset.rg;zones('1');zones('2')}
+const q=e.target.closest('[data-q]');if(q)openQV(q.dataset.q)});
+/* catalogue */
+let S={cat:'',q:''};
+function filt(){const q=slug(S.q);return D.filter(p=>(!S.cat||p.k==S.cat)&&(!q||slug([p.n,p.c,p.w,cn(p.k),CI[p.k].join(' '),p.origin||''].join(' ')).includes(q)))}
+function renderCat(){const gr=$('#gr');gr.classList.add('ld');setTimeout(()=>{const r=filt();gr.innerHTML=r.slice(0,120).map(p=>card(p)).join('');gr.classList.remove('ld');
+$('#cnt').textContent=r.length+' '+(r.length==1?t('res1'):t('res'));$('#em').hidden=r.length>0;
+$('#act').innerHTML=(S.cat?`<button class="chip" data-x="cat">${cn(S.cat)} ×</button>`:'')+(S.q?`<button class="chip" data-x="q">“${esc(S.q)}” ×</button>`:'')+((S.cat||S.q)?` <button class="lk" data-x="all">${t('p_clear')}</button>`:'')},120)}
+$('#q').addEventListener('input',e=>{S.q=e.target.value;renderCat()});
+document.addEventListener('change',e=>{if(e.target.name=='cf'){S.cat=e.target.value;renderCat()}});
+document.addEventListener('click',e=>{const x=e.target.closest('[data-x]');if(x){if(x.dataset.x!='q')S.cat='';if(x.dataset.x!='cat'){S.q='';$('#q').value=''}buildStatic();renderCat()}if(e.target.id=='cl'){S={cat:'',q:''};$('#q').value='';buildStatic();renderCat()}});
+$('#fbt').onclick=()=>{const o=$('#fs').classList.toggle('o');$('#fbt').setAttribute('aria-expanded',o)};
+/* product */
+function prod(id){const p=D.find(x=>x.id==id);if(!p)return view('404');
+const im=p.img?`<button class="main" data-lb="img/${p.img}.webp" aria-label="Ingrandisci immagine"><img src="img/${p.img}.webp" alt="${esc(p.n)}"></button>`:`<div class="main" style="display:grid;place-items:center;cursor:default"><div class="ph0">${esc(cn(p.k))}<small>${p.c}</small></div></div>`;
+const rows=[[t('code'),p.c],[t('wt'),p.w],[t('cat'),cn(p.k)],p.origin&&[t('org'),p.origin],p.reg&&[t('reg'),p.reg[0].toUpperCase()+p.reg.slice(1)],p.ing&&[t('ing'),p.ing]].filter(Boolean);
+$('#crumb').innerHTML=`<a href="#/">${t('home')}</a> / <a href="#/prodotti">${t('n_prod')}</a> / <a href="#/prodotti/${p.k}">${cn(p.k)}</a> / ${esc(p.n)}`;
+$('#pdc').innerHTML=`<div class="pd"><div class="gal">${im}</div><div><p class="eye">${cn(p.k)}</p><h1>${esc(p.n)}</h1><p class="meta"><b>${p.c}</b> · ${esc(p.w)}</p><h2 style="font-size:24px;margin-top:28px">${t('about')}</h2><p style="margin-top:10px;color:#37445c">${esc(p.d||t('desc_ph'))}</p><h2 style="font-size:24px;margin-top:28px">${t('det')}</h2><dl class="dl">${rows.map(r=>`<dt>${r[0]}</dt><dd>${esc(r[1])}</dd>`).join('')}</dl><a class="btn p" href="#/contatti" data-ask="${p.c}">${t('ask')}</a></div></div>`;
+$('#relg').innerHTML=D.filter(x=>x.k==p.k&&x.id!=p.id).slice(0,4).map(x=>card(x)).join('');
+document.title=p.n+' — Noi, la Qualità'}
+function openQV(id){const p=D.find(x=>x.id==id);$('#qvb').innerHTML=`<div class="mi">${p.img?`<img src="img/${p.img}.webp" alt="${esc(p.n)}">`:`<div class="ph0" style="padding-top:120px">${cn(p.k)}<small>${p.c}</small></div>`}</div><div class="mt"><p class="eye">${cn(p.k)}</p><h2 id="qvt" style="font-size:32px">${esc(p.n)}</h2><p class="meta"><b>${p.c}</b> · ${esc(p.w)}</p>${p.origin?`<p class="meta">${t('org')}: ${esc(p.origin)}</p>`:''}<p style="color:#37445c">${esc(p.d||t('desc_ph'))}</p><a class="btn p" href="#/prodotto/${p.id}" style="margin-top:auto" id="qvl">${t('vf')}</a></div>`;
+$('#qvd').showModal()}
+$('#qvd').addEventListener('click',e=>{if(e.target.id=='qvd'||e.target.closest('.x')||e.target.id=='qvl')$('#qvd').close()});
+$('#lb').addEventListener('click',e=>{$('#lb').close()});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-lb]');if(b){$('#lbi').src=b.dataset.lb;$('#lb').showModal()}});
+/* header search */
+$('#sbm').onclick=()=>{location.hash='#/prodotti';setTimeout(()=>$('#q').focus(),60)};
+$('#mbt').onclick=()=>{const o=$('#nv').classList.toggle('o');$('#mbt').setAttribute('aria-expanded',o)};
+addEventListener('scroll',()=>$('#hd').classList.toggle('s',scrollY>20),{passive:true});
+/* contact */
+$('#cf').addEventListener('submit',e=>{e.preventDefault();let ok=true;const chk=(id,bad,msg)=>{const el=$('#'+id),er=$('#e_'+id);const b=bad(el);el.setAttribute('aria-invalid',b);er.textContent=b?msg:'';if(b)ok=false};
+chk('fn',x=>!x.value.trim(),t('ev_r'));chk('fe',x=>!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(x.value),t('ev_e'));chk('fm',x=>!x.value.trim(),t('ev_r'));chk('fk',x=>!x.checked,t('ev_r'));
+if(!ok)return $('#cf [aria-invalid=true]').focus();
+const b=`${$('#fn').value}\n${$('#fe').value}\n${$('#fc').value}\n\n${$('#fm').value}`;
+location.href='mailto:info@noilaqualita.it?subject='+encodeURIComponent('Richiesta dal sito')+'&body='+encodeURIComponent(b);$('#fok').textContent=t('ok');$('#fok').hidden=false});
+/* router */
+function view(n){$$('.v').forEach(v=>v.classList.toggle('on',v.id=='v-'+n));$$('nav a[data-r]').forEach(a=>a.classList.toggle('on',a.dataset.r==n));$('#cta2').style.display=['contatti','404'].includes(n)?'none':'';$('#nv').classList.remove('o');scrollTo(0,0);document.title='Noi, la Qualità — '+(n=='home'?'Catalogo prodotti 2026':t('n_'+({prodotti:'prod',regioni:'reg',storia:'story',contatti:'cont'}[n]||'home')))}
+function route(){const h=location.hash.replace(/^#\/?/,'').split('/');const a=h[0]||'home';
+if(a=='home')view('home');else if(a=='prodotti'){S.cat=CATS.includes(h[1])?h[1]:S.cat&&h[1]===undefined?S.cat:'';view('prodotti');buildStatic();renderCat()}
+else if(a=='prodotto'){view('prodotto');prod(h[1])}else if(['regioni','storia','contatti'].includes(a))view(a);else view('404')}
+addEventListener('hashchange',route);
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+$$('.r').forEach(x=>io.observe(x));
+applyI18n();
+</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Gruppo Noi, la qualità srl","email":"info@noilaqualita.it","telephone":"+39 06 66995093","address":{"@type":"PostalAddress","streetAddress":"Viale C. Sabatini, 161","postalCode":"00144","addressLocality":"Roma","addressCountry":"IT"}}</script>
+</body>
+</html>
